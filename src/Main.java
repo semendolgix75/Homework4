@@ -47,15 +47,15 @@ public class Main {
         System.out.println("Введите возраст от двух лет: ");
 //        byte agePerson=in.nextByte();
         byte agePerson=25;
-        byte ageKidergardenMin=2;
-        byte ageKidergardenMax=6;
+        byte ageKindergardenMin=2;
+        byte ageKindergardenMax=6;
         byte ageSchoolMin=7;
         byte ageSchoolMax=17;
         byte ageStudentMin=18;
         byte ageStudentMax=24;
 
 
-        if(agePerson>=ageKidergardenMin && agePerson<=ageKidergardenMax) {
+        if(agePerson>=ageKindergardenMin && agePerson<=ageKindergardenMax) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в детский сад\n");
         } else if (agePerson>=ageSchoolMin && agePerson<=ageSchoolMax) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в школу\n");
@@ -80,6 +80,8 @@ public class Main {
             System.out.println("Если возраст ребенка равен "+ageVisitor+", то ему можно кататься на аттракционе в сопровождении\n");
         }else
             System.out.println("Если возраст ребенка равен "+ageVisitor+", то ему можно кататься без сопровождения взрослого\n");
+
+
 
         System.out.println("Задача 6 ");
 //         Вагон рассчитан на 60 сидячих мест, все остальные — стоячие.
