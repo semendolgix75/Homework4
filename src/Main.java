@@ -22,7 +22,7 @@ public class Main {
         if (tempToday < tempCritical) {
             System.out.println("На улице " + tempToday + " градусов, нужно надеть шапку.\n");
         } else {
-            if (tempToday > 5) {
+            if (tempToday > tempCritical) {
                 System.out.println("На улице " + tempToday + " градусов можно идти без шапки.\n");
             } else {
                 System.out.println("На улице " + tempToday + " градусов, условием задачи не определено в чем идти.\n");
@@ -51,15 +51,15 @@ public class Main {
         System.out.println("Введите возраст от двух лет: ");
 //        byte agePerson=in.nextByte();
         byte agePerson = 25;
-        byte ageKindergardenMin = 2;
-        byte ageKindergardenMax = 6;
+        byte ageKinderGardenMin = 2;
+        byte ageKinderGardenMax = 6;
         byte ageSchoolMin = 7;
         byte ageSchoolMax = 17;
         byte ageStudentMin = 18;
         byte ageStudentMax = 24;
 
 
-        if (agePerson >= ageKindergardenMin && agePerson <= ageKindergardenMax) {
+        if (agePerson >= ageKinderGardenMin && agePerson <= ageKinderGardenMax) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в детский сад\n");
         }
         if (agePerson >= ageSchoolMin && agePerson <= ageSchoolMax) {
