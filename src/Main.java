@@ -59,14 +59,11 @@ public class Main {
         byte ageStudentMax = 24;
         if (agePerson >= ageKinderGardenMin && agePerson <= ageKinderGardenMax) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в детский сад\n");
-        }
-        if (agePerson >= ageSchoolMin && agePerson <= ageSchoolMax) {
+        } else if (agePerson >= ageSchoolMin && agePerson <= ageSchoolMax) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в школу\n");
-        }
-        if (agePerson >= ageStudentMin && agePerson <= ageStudentMax) {
+        } else if (agePerson >= ageStudentMin && agePerson <= ageStudentMax) {
             System.out.println("Если возраст человека равен " + agePerson + ", то его место в университете.\n");
-        }
-        if (agePerson > ageStudentMax) {
+        } else {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему пора ходить на работу.\n");
         }
 
@@ -76,13 +73,12 @@ public class Main {
 //        Если ребенку меньше 5 лет, то он не может кататься на аттракционе.
 //        Если ребенку больше 5, но меньше 14 лет, то он может кататься только в сопровождении взрослого. Если взрослого нет, то кататься нельзя.
 //        Если ребенок старше 14 лет, то он может кататься без сопровождения взрослого.
-        byte ageVisitor = 20;
+        byte ageVisitor = 2;
         byte ageNoAttraction = 5;
         byte ageAccompaniedBy = 14;
         if (ageVisitor < ageNoAttraction) {
             System.out.println("Если возраст ребенка равен " + ageVisitor + ", то ему нельзя кататься на аттракционе\n");
-        }
-        if (ageVisitor < ageAccompaniedBy) {
+        } else if (ageVisitor < ageAccompaniedBy) {
             System.out.println("Если возраст ребенка равен " + ageVisitor + ", то ему можно кататься на аттракционе в сопровождении\n");
         } else {
             System.out.println("Если возраст ребенка равен " + ageVisitor + ", то ему можно кататься без сопровождения взрослого\n");
@@ -91,41 +87,36 @@ public class Main {
 
         System.out.println("Задача 6 ");
 //         Вагон рассчитан на 60 сидячих мест, все остальные — стоячие.
-        int passenger = 35;              //Запрос количества пассажиров
+        int passenger = 10;              //Запрос количества пассажиров
         int capacityCarTrain = 102;       //Вместимость одного вагона поезда — 102 человека.
         int seatsInCarTrain = 60;         //Вагон рассчитан на 60 сидячих мест, все остальные — стоячие.
         int seatsFree = (seatsInCarTrain - passenger);      //Количество сидячих мест
         int placeFree = (capacityCarTrain - passenger);     //Количество оставшихся мест
         if (passenger <= seatsInCarTrain) {
             System.out.println("Есть место в вагоне еще на " + placeFree + " чел., из них сидячих - " + seatsFree + " мест\n");
-        } else {
-            if (passenger >= capacityCarTrain) {
-                System.out.println("Вагон уже полностью забит\n");
-            } else {
-                if (passenger >= seatsInCarTrain) {
-                    System.out.println(("Есть место в вагоне еще на " + placeFree + ", из них сидячих мест нет\n"));
-                }
-            }
+        } else if (passenger >= capacityCarTrain) {
+            System.out.println("Вагон уже полностью забит\n");
+        } else if (passenger >= seatsInCarTrain) {
+            System.out.println(("Есть место в вагоне еще на " + placeFree + ", из них сидячих мест нет\n"));
         }
+
 
         System.out.println("Задача 7 ");
 //        С помощью условного оператора и конструкции else напишите программу, которая вычисляет,
 //        какое из трех чисел бо́льшее, и выводит результат в консоль.
-        int one = 0;
+        int one = 6;
         int two = 1;
         int three = 3;
         int max = 0;
         if (one > two && one > three) {
             max = one;
-        } else {
-            if (two > one && two > three) {
-                max = two;
-            } else {
-                if (three > one && three > two) {
-                    max = three;
-                }
-            }
+        } else if (two > one && two > three) {
+            max = two;
+        } else if (three > one && three > two) {
+            max = three;
         }
+
+
         System.out.println("Из трех чисел бо́льшее = " + max);
     }
 }
