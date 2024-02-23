@@ -57,7 +57,6 @@ public class Main {
         byte ageSchoolMax = 17;
         byte ageStudentMin = 18;
         byte ageStudentMax = 24;
-
         if (agePerson >= ageKinderGardenMin && agePerson <= ageKinderGardenMax) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в детский сад\n");
         }
